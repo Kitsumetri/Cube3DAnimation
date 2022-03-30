@@ -10,13 +10,13 @@ def make_resolution():
     return resolution
 
 
-def print_drawing(drawing):
-    for i in drawing:
+def print_drawing(screen):
+    for i in screen:
         print(''.join(list(map(str, i))))
 
 
 def drawing():
-    resolution = make_resolution()
+    screen = make_resolution()
     x_0 = 17
     y_0 = 85
     for i in range(HEIGHT):
@@ -33,8 +33,8 @@ def drawing():
                 y = y_0 + j
 
             if abs(x) + abs(y) <= 50:
-                resolution[i][j] = '@'
-    print_drawing(resolution)
+                screen[i][j] = '@'
+    print_drawing(screen)
 
 
 def main():
