@@ -48,7 +48,7 @@ def drawing():
                 y = ((default_x + sin(t * 0.003) * 20) * cos(pi / 4) + default_y * sin(pi / 4))
                 '''
 
-                color = int(sqrt(x**2 + y**2)/2)
+                color = round(sqrt(x**2 + y**2)/2)
                 if color < 0:
                     color = 0
                 if color > len(RTX):
