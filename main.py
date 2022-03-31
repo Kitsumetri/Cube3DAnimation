@@ -1,4 +1,4 @@
-from math import cos, sin, pi
+from math import cos, sin, tan
 
 # Resolution
 WIDTH = 170
@@ -20,17 +20,17 @@ def print_drawing(screen):
 
 def drawing():
 
-    screen = make_resolution()
     x_0 = round(HEIGHT/2)  # 17
     y_0 = round(WIDTH/2)   # 85
     aspect = (11*WIDTH)/(24*HEIGHT)
 
-    for t in range(0, 10):
+    for t in range(100000):
+        screen = make_resolution()
         for i in range(-2*x_0, x_0):
             for j in range(-2*y_0, y_0):
-                default_x = (x_0 + i) * aspect + sin(t)
-                x = (default_x * cos(pi/4) - (y_0 + j) * sin(pi/4))
-                y = (default_x * sin(pi/4) + (y_0 + j) * cos(pi/4))
+                default_x = (x_0 + i) * aspect
+                x = (default_x * cos(t*0.01) - (y_0 + j) * sin(t*0.01))
+                y = (default_x * sin(t*0.01) + (y_0 + j) * cos(t*0.01))
                 if abs(x) + abs(y) <= 20:
                     screen[i][j] = '@'
         print_drawing(screen)
