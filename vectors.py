@@ -19,7 +19,7 @@ def get_color(vector):
 
 
 def rotation(vector, t):
-    t *= 0.4
+    t *= 0.2
     matrix_rotate = np.array([[cos(t), sin(t),  0, 0],
                               [-sin(t), cos(t), 0, 0],
                               [0,         0,    1, 0],

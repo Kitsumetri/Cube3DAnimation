@@ -1,6 +1,6 @@
 # Resolution (WIDTH/HEIGHT = 5/1)
-WIDTH = 300
-HEIGHT = 60
+WIDTH = 170
+HEIGHT = 34
 
 
 def make_resolution():
